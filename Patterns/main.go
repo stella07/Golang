@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	var N = 5
-	Pattern22(N)
+	Pattern1(N)
 }
 
 /*
@@ -544,13 +544,137 @@ func Pattern22(N int) {
 /*
 Hollow Diamond Pyramid
 
-
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
 
 */
-
 func Pattern23(N int) {
 	for i := 1; i <= N; i++ {
+		for j := 1; j <= N-i; j++ {
+			fmt.Print(" ")
+		}
+		for j := 1; j <= 2*(i)-1; j++ {
+			if j == 1 || j == 2*(i)-1 {
+				fmt.Print("*")
+			} else {
+				fmt.Print(" ")
+			}
 
+		}
+		fmt.Println()
+	}
+	for i := 1; i < N; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print(" ")
+		}
+		for j := 1; j <= (N-i)*2-1; j++ {
+			if j == 1 || j == (N-i)*2-1 {
+				fmt.Print("*")
+			} else {
+				fmt.Print(" ")
+			}
+
+		}
+		fmt.Println()
+	}
+}
+
+/*
+Hollow Hourglass Pattern
+
+
+* * * * *
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+* * * * *
+
+*/
+func Pattern24(N int) {
+	for i := 1; i <= N; i++ {
+		for j := 1; j <= i-1; j++ {
+			fmt.Print(" ")
+		}
+		for j := 1; j <= N-i+1; j++ {
+			if i == 1 || j == 1 || j == N-i+1 {
+				fmt.Print("* ")
+			} else {
+				fmt.Print("  ")
+			}
+
+		}
+		fmt.Println()
+	}
+
+	for i := 1; i < N; i++ {
+		for j := 1; j <= N-i-1; j++ {
+			fmt.Print(" ")
+		}
+		for j := 1; j <= i+1; j++ {
+			if i == N-1 || j == 1 || j == i+1 {
+				fmt.Print("* ")
+			} else {
+				fmt.Print("  ")
+			}
+
+		}
+		fmt.Println()
+	}
+}
+
+/*
+X - Star Pattern
+
+*       *
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+*       *
+
+*/
+func Pattern25(N int) {
+	for i := 1; i <= N; i++ {
+		for j := 1; j <= i-1; j++ {
+			fmt.Print(" ")
+		}
+		for j := 1; j <= N-i+1; j++ {
+			if j == 1 || j == N-i+1 {
+				fmt.Print("* ")
+			} else {
+				fmt.Print("  ")
+			}
+
+		}
+		fmt.Println()
+	}
+
+	for i := 1; i < N; i++ {
+		for j := 1; j <= N-i-1; j++ {
+			fmt.Print(" ")
+		}
+		for j := 1; j <= i+1; j++ {
+			if j == 1 || j == i+1 {
+				fmt.Print("* ")
+			} else {
+				fmt.Print("  ")
+			}
+
+		}
 		fmt.Println()
 	}
 }
