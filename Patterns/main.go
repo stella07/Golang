@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	var N = 5
-	Pattern21(N)
+	Pattern22(N)
 }
 
 /*
@@ -490,7 +490,11 @@ func Pattern20(N int) {
 
 /*
 Hollow Triangle Pattern
-
+    *
+   * *
+  *   *
+ *     *
+*********
 
 */
 
@@ -506,6 +510,47 @@ func Pattern21(N int) {
 				fmt.Print(" ")
 			}
 		}
+		fmt.Println()
+	}
+}
+
+/*
+Hollow Reverse Triangle Pattern
+
+*********
+ *     *
+  *   *
+   * *
+    *
+
+*/
+
+func Pattern22(N int) {
+	for i := 1; i <= N; i++ {
+		for j := 1; j <= i-1; j++ {
+			fmt.Print(" ")
+		}
+		for j := 1; j <= 2*(N-i+1)-1; j++ {
+			if j == 2*(N-i+1)-1 || j == 1 || i == 1 {
+				fmt.Print("*")
+			} else {
+				fmt.Print(" ")
+			}
+		}
+		fmt.Println()
+	}
+}
+
+/*
+Hollow Diamond Pyramid
+
+
+
+*/
+
+func Pattern23(N int) {
+	for i := 1; i <= N; i++ {
+
 		fmt.Println()
 	}
 }
