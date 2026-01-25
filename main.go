@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	arrays.LargestNum()
+	arrays.ArraysOperation()
 }
