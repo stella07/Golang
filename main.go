@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	arrays.ArraysOperation()
+	arrays.SecondSmallestLargest()
 }
